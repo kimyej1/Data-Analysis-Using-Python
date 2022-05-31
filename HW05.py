@@ -114,3 +114,35 @@ Note: Consider all sightings stored in "ufosightings".
 # your code here
 min_duration = float(min(ufosightings, key = lambda x: x["duration (seconds)"] )["duration (seconds)"])
 print(min_duration)
+
+'''
+8. What are the top 3 shapes sighted, and how many sightings were there for each? 
+
+Note: Consider all sightings stored in "ufosightings".
+
+- Create a new list "sightings_shapes" containing values from the "shape" column in ufosightings.  
+- Create a new dictionary "count" with values of that column as keys and the counts as values.
+- Get a list of the dictionary keys and values using the items() method.  This will return a list of key:value pairs.
+Sort the list of key:value pairs in reverse order, from greatest (most sightings) to least.
+
+Get the top 3 and store in "top3shapes".  Print the result.
+
+'''
+
+#Create a new list containing values from the "shape" column in ufosightings.
+# your code here
+sightings_shapes = [row["shape"] for row in ufosightings]
+
+#Create a new dictionary with values of that column as keys and the counts as values.
+# your code here
+count = {}
+for shape in sightings_shapes :
+    if shape not in count:
+        count[shape] = 0
+    count[shape] = count[shape] + 1
+
+#Get a list of the dictionary keys and values (use the items() method) and sort them in reverse order, from greatest (most sightings) to least.
+#Get and print the top 3.
+# your code here
+
+top3shapes = sorted(count.items(), key=lambda x: x[1], reverse=True)[:3]
