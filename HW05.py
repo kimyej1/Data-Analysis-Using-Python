@@ -144,4 +144,8 @@ for shape in sightings_shapes :
 #Get a list of the dictionary keys and values (use the items() method) and sort them in reverse order, from greatest (most sightings) to least.
 #Get and print the top 3.
 # your code here
+<<<<<<< HEAD
+=======
+
+>>>>>>> origin/main
 top3shapes = sorted(count.items(), key=lambda x: x[1], reverse=True)[:3]
