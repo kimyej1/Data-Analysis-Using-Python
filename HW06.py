@@ -73,3 +73,4 @@ Check the "directors" sheet
 count = df_directors['id'].value_counts()
 df_directors_clean = df_directors.drop_duplicates()
 
+
