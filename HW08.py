@@ -78,7 +78,7 @@ Name your variable 'pivot_agg'
 """
 
 # your code here
-pivot_agg = pd.pivot_table(df, index = ["country","director_name"])[["imdb_score"]]
+pivot_agg = pd.pivot_table(df, index = ["country","director_name"], values = ["imdb_score"], aggfunc = ["median"])
 print(pivot_agg)
 
 
